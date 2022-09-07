@@ -1,9 +1,20 @@
 body{
-/* background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 100%); */
-color: greenyellow; 
-background-color: teal;
+
+    background-color: black;
+    color:whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    line-height: 2;
 }
 
-a {
-    color: greenyellow
+a{
+    color:white;
+}
+
+ul{
+    list-style-type: upper-roman;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 500;
+    line-height: 0.5;
 }

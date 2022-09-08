@@ -1,17 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@500&family=Roboto:wght@400;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body{
-
-    background-color: black;
+    background-color: hotpink;
     color:whitesmoke;
+    padding: 30px 30px;
+
     font-family: 'Roboto', sans-serif;
-    line-height: 2;
+    font-size: 5rem;
+}
+
+header{
+    padding-bottom: 50px;
 }
 
 a{
-    color:white;
+    color:whitesmoke;
 }
 
-ul{
-    list-style-type: upper-roman;
+a:hover{
+    color:black;
+}
+
+ul li{
+    color: black;
+}
+
+
+ul li:before{
+    content: "*";
+    color:black;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    margin-left: -8px;
+}
+
+#title{
+    margin-bottom: 30vh;
+    word-break: break-word;
 }

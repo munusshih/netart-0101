@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@500&family=Roboto:wght@400;900&display=swap');
+
+:root {
+    --bg-color: hotpink;
+    --text-color: black;
+    --visited-color: white;
+    --focus-color: yellow;
+    --togglebg-color: black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    max-width: 500px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: whitesmoke;
+    padding: 30px 30px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+}
+
+
+header {
+    padding-bottom: 50px;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--visited-color);
+    font-weight: 500;
+    text-decoration: underline;
+    text-transform: lowercase;
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+p {
+    color: var(--text-color);
+}
+
+p:before {
+    content: "*";
+}
+
+ul li {
+    color: var(--visited-color);
+}
+
+
+ul li:before {
+    content: "*";
+    color: var(--visited-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    margin-left: -8px;
+    max-width: 1500px;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 6rem;
+}
+
+h2 a {
+    text-decoration: none;
+    padding: 15px 30px;
+    color: var(--text-color);
+    border: 8px solid var(--text-color);
+    border-radius: 80px;
+}
+
+h2 a:hover {
+    text-decoration: none;
+    padding: 15px 30px;
+    color: var(--visited-color);
+    border: 8px solid var(--visited-color);
+    border-radius: 80px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+    text-align: right;
+}
+
+#title {
+    margin-bottom: 30vh;
+}
+
+#title p {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.game {
+    padding: 50px 100px;
+    padding-top: 70px;
+    color: var(--visited-color);
+    border: 10px solid var(--text-color);
+    border-radius: 200px;
+}
+
+.small{
+    font-size: 3rem;
+    margin-bottom: 10vh;
+}
+
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 3rem;
+    }
+
+    h2, h3, h4, h5 {
+      font-size: 2rem;
+    }
+
+    body{
+      font-size: 2rem;
+    }
+
+    .small{
+        font-size: 1rem;
+    }
+
+    .game {
+        padding: 120px 50px;
+        padding-top: 120px;
+        color: var(--visited-color);
+        border: 10px solid var(--text-color);
+        border-radius: 200px;
+    }
+  }

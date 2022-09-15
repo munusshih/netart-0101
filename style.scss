@@ -162,3 +162,43 @@ input:checked+.slider {
         color: var(--visited-color);
     }
 }
+
+@media only screen and (max-width: 800px) {
+    #title{
+        font-size: 3rem;
+
+        ul li{
+            font-size: 3rem;
+        }
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-size: 3rem;
+    }
+
+    body{
+      font-size: 3rem;
+      padding: 20px;
+    }
+
+    .theme-switch {
+        height: 40px;
+        width: 160px;
+    }
+
+    .slider {
+
+        &:before {
+            left: 122px;
+            bottom: 4px;
+            height: 32px;
+            width: 32px;
+        }
+    }
+
+    input:checked+.slider {
+        &:before {
+            transform: translateX(-118px);
+        }
+    }
+  }

@@ -17,6 +17,7 @@
 img{
     width: 100%;
     float:right;
+    padding-left: 50px;
     max-width: 500px;
 }
 
@@ -106,6 +107,10 @@ p{
 }
 
 @media only screen and (max-width: 800px) {
+    img{
+      margin-bottom: 50px;
+    }
+
     h1, h2, h3, h4, h5 {
       font-size: 2rem;
     }

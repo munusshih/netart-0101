@@ -185,7 +185,7 @@ input:checked + .slider:before {
   }
   .theme-switch {
     height: 40px;
-    width: 160px;
+    width: 110px;
   }
   .slider:before {
     left: 6px;
@@ -194,8 +194,8 @@ input:checked + .slider:before {
     width: 32px;
   }
   input:checked + .slider:before {
-    -webkit-transform: translateX(118px);
-            transform: translateX(118px);
+    -webkit-transform: translateX(68px);
+            transform: translateX(68px);
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -183,7 +183,7 @@ input:checked+.slider {
 
     .theme-switch {
         height: 40px;
-        width: 160px;
+        width: 110px;
     }
 
     .slider {
@@ -198,7 +198,7 @@ input:checked+.slider {
 
     input:checked+.slider {
         &:before {
-            transform: translateX(118px);
+            transform: translateX(68px);
         }
     }
   }

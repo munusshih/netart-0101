@@ -124,7 +124,15 @@ h2 a:hover {
     color: var(--visited-color);
     border: 10px solid var(--text-color);
     border-radius: 200px;
+    animation: border 4s infinite;
+    box-sizing: border-box;
 }
+
+@keyframes border {
+    0%, 100%  {border: 10px solid var(--text-color);}
+    50% {border: 20px solid var(--text-color);}
+  }
+
 
 .small{
     font-size: 3rem;
@@ -152,7 +160,12 @@ h2 a:hover {
         padding: 120px 50px;
         padding-top: 120px;
         color: var(--visited-color);
-        border: 10px solid var(--text-color);
+        border: 10px dotted var(--text-color);
         border-radius: 200px;
     }
+
+    @keyframes border {
+        0%, 100%  {border: 11px solid var(--text-color);}
+        50% {border: 20px solid var(--text-color);}
+      }
   }

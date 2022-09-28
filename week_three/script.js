@@ -64,9 +64,13 @@ btn.onclick = function () {
     if (targetDiv.style.display !== "none") {
         targetDiv.style.display = "none";
         btn.innerHTML = '+'
+        elem.classList.remove("open");
+        elem.classList.add("close");
     } else {
         targetDiv.style.display = "block";
         btn.innerHTML = 'x'
+        elem.classList.remove("close");
+        elem.classList.add("open");
     }
 };
 

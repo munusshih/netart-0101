@@ -13,8 +13,10 @@ body {
 #title {
     width: 100%;
     height: calc(100vh - 20px);
-    padding: 20px;
-    padding-right: 100px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
     box-sizing: border-box;
 
     color: #89cff0;
@@ -22,6 +24,14 @@ body {
     overflow: scroll;
 
     z-index: 1;
+}
+
+.open {
+    padding-right: 297px;
+}
+
+.close {
+    padding-right: 20px;
 }
 
 #corner {
@@ -60,8 +70,8 @@ body {
 
     font-size: 30px;
 
-    width: 297px;
-    height: 421px;
+    width: 298px;
+    height: 420px;
 
     background: white;
     border: 20px solid #89cff0;
@@ -78,7 +88,7 @@ body {
     left: -20px;
 
     background: white;
-    z-index: 2;
+    z-index: 100;
 
     width: 0;
     height: 0;

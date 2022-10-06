@@ -1,0 +1,17 @@
+body {
+  background: black;
+}
+
+img {
+  width: 50%;
+  position: absolute;
+  top: 50vw;
+  left: 50vh;
+  -webkit-transition: top 2s, left 2s;
+  transition: top 2s, left 2s;
+}
+
+img:hover {
+  top: 20px;
+}
+/*# sourceMappingURL=style.css.map */

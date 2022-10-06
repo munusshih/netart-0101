@@ -1,0 +1,18 @@
+body{
+    background: black;
+}
+
+img {
+    width: 50%;
+    position: absolute;
+
+    top: 50vw;
+    left: 50vh;
+    transition: top 2s, left 2s;
+
+    &:hover{
+        top: 20px;
+
+    }
+}
+

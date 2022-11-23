@@ -1,0 +1,1097 @@
+body {
+  margin: 0;
+  background: #f4d6db;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.kitty-maker {
+  padding: 1rem;
+  height: calc(100vh - 2rem);
+  position: relative;
+}
+
+/* cat styles */
+.cat-container {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+.cat-container.static {
+  position: relative;
+}
+
+.cat-speech-bubble {
+  border: 2px solid #333;
+  color: #333;
+  background: #fff;
+  padding: 0.5rem 0.875rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.cat {
+  width: 100%;
+  position: absolute;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.cat-head-wrapper {
+  width: 70px;
+  height: 50px;
+  position: relative;
+}
+
+.cat-head {
+  width: 100%;
+  height: 100%;
+  border-radius: 25% 25% 50% 50%;
+  background: orange;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 10px;
+  z-index: 3;
+}
+
+.cat-face {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: -10px;
+}
+
+.cat-ear-l,
+.cat-ear-r {
+  position: absolute;
+  top: -11px;
+  width: 20px;
+  height: 30px;
+  /* make triangles */
+  background: conic-gradient(at 50% 50%, transparent 135deg, orange 0, orange 225deg, transparent 0) no-repeat;
+}
+
+.cat-ear-l {
+  left: 0;
+}
+
+.cat-ear-r {
+  right: 0;
+}
+
+.cat-body {
+  width: 180px;
+  height: 60px;
+  background: orange;
+  border-radius: 20px 50px 50px 50px;
+  position: relative;
+  top: -10px;
+  z-index: 2;
+}
+
+.paw {
+  width: 15px;
+  height: 60px;
+  background: orange;
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+  border-radius: 50px;
+  position: absolute;
+  bottom: -20px;
+}
+
+.paw-1 {
+  left: 5%;
+}
+
+.paw-2 {
+  left: 17.5%;
+}
+
+.paw-3 {
+  left: 50%;
+}
+
+.paw-4 {
+  left: 62.5%;
+}
+
+.cat-tail {
+  background: orange;
+  width: 80px;
+  height: 20px;
+  border-radius: 50px;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  -webkit-transform: rotateZ(120deg);
+          transform: rotateZ(120deg);
+}
+
+/* calico-cat styles */
+.calico .cat-body {
+  background: black;
+}
+
+.calico .cat-tail {
+  background: orange;
+}
+
+.calico .cat-head {
+  background: white;
+}
+
+.calico .paw {
+  background: white;
+}
+
+.calico .paw-2 {
+  background: orange;
+}
+
+.aggro:nth-of-type(1) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(2) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(3) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(4) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(5) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(6) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(7) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(8) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(9) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(10) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(11) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(12) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(13) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(14) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(15) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(16) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(17) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(18) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(19) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(20) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(21) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(22) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(23) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(24) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(25) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(26) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(27) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(28) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(29) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(30) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(31) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(32) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(33) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(34) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(35) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(36) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(37) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(38) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(39) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(40) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(41) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(42) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(43) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(44) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(45) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(46) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(47) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(48) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(49) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(50) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(51) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(52) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(53) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(54) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(55) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(56) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(57) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(58) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(59) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(60) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(61) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(62) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(63) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(64) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(65) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(66) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(67) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(68) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(69) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(70) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(71) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(72) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(73) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(74) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(75) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(76) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(77) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(78) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(79) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(80) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(81) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(82) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(83) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(84) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(85) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(86) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(87) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(88) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(89) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(90) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(91) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(92) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 4s;
+          transition-delay: 4s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(93) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(94) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(95) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(96) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(97) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.aggro:nth-of-type(98) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.aggro:nth-of-type(99) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.aggro:nth-of-type(100) .cat-tail {
+  -webkit-animation: 3s wag infinite;
+          animation: 3s wag infinite;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+@-webkit-keyframes wag {
+  0% {
+    -webkit-transform: rotateZ(120deg);
+            transform: rotateZ(120deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(90deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(120deg);
+            transform: rotateZ(120deg);
+  }
+}
+
+@keyframes wag {
+  0% {
+    -webkit-transform: rotateZ(120deg);
+            transform: rotateZ(120deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(90deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(120deg);
+            transform: rotateZ(120deg);
+  }
+}
+
+/* runaway cat animation styles */
+.cat-container {
+  top: 0;
+  left: 0;
+  -webkit-transition: top 1s, left 1s;
+  transition: top 1s, left 1s;
+}
+/*# sourceMappingURL=style.css.map */
